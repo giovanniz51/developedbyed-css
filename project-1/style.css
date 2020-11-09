@@ -1,0 +1,180 @@
+/* Global Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+h1 {
+	font-family: "Pattaya", sans-serif;
+	font-size: 2.6rem;
+	font-weight: 400;
+}
+
+li,
+button,
+label,
+input {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 4.8rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 3rem;
+	font-weight: 400;
+}
+
+h4,
+h5 {
+	font-size: 2.8rem;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+button {
+	padding: 1rem 4rem;
+	background: #4c6e97;
+	border: none;
+	border-radius: 0.3rem;
+	color: white;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+	background-color: #131c27;
+}
+/* Nav Section with Hero */
+.main-head {
+	background: #131c27;
+	color: white;
+}
+
+nav {
+	min-height: 10vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 90%;
+	margin: auto;
+}
+
+nav ul {
+	display: flex;
+	flex: 1 1 40rem;
+	list-style: none;
+	justify-content: space-evenly;
+}
+
+#logo {
+	flex: 2 1 40rem;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 90vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.342)),
+		url("http://unsplash.it/1000?building&gravity=center");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.hero h2,
+.hero h3 {
+	margin: 2rem;
+}
+
+/* Locations Section */
+#locations {
+	min-height: 90vh;
+	background: linear-gradient(0, rgba(0, 0, 0, 0.473), rgba(0, 0, 0, 0.308)),
+		url("http://unsplash.it/1000?random&gravity=center");
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.locations__head h2 {
+	padding: 1rem 0;
+	margin: 0 5rem;
+	text-decoration: underline;
+}
+
+.locations__head h3 {
+	padding: 4rem 0;
+	margin: 0 5rem;
+}
+
+.cloud {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.moving-cloud-1 {
+	z-index: 1;
+	animation: cloudAnim 5s infinite alternate;
+}
+.moving-cloud-2 {
+	top: 10rem;
+	z-index: 0;
+	opacity: 0.5;
+	filter: grayscale(0.5);
+	animation: cloudAnim 5.5s infinite alternate;
+}
+
+@keyframes cloudAnim {
+	0% {
+		transform: translate(10%, -10%);
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+
+/* Mediq Queries */
+
+@media screen and (max-width: 888px) {
+	html {
+		font-size: 55%;
+	}
+	nav {
+		text-align: center;
+	}
+
+	#logo {
+		padding: 1rem 0;
+	}
+
+	nav ul {
+		padding: 1rem 0;
+	}
+
+	.cloud {
+		height: 40rem;
+	}
+}
